@@ -1,0 +1,205 @@
+:root {
+  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color: #1a202c;
+  background: #f0f4f8;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  
+  /* Travel app color scheme */
+  --navy-dark: #0f172a;
+  --navy-primary: #1e3a5f;
+  --navy-light: #2d4a6f;
+  --teal-primary: #14b8a6;
+  --teal-light: #2dd4bf;
+  --teal-dark: #0f766e;
+  --orange-accent: #f97316;
+  --orange-light: #fb923c;
+  --white: #ffffff;
+  --gray-50: #f8fafc;
+  --gray-100: #f1f5f9;
+  --gray-200: #e2e8f0;
+  --gray-300: #cbd5e1;
+  --gray-400: #94a3b8;
+  --gray-500: #64748b;
+  --gray-600: #475569;
+  --gray-700: #334155;
+  --gray-800: #1e293b;
+  --gray-900: #0f172a;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body, #root {
+  margin: 0;
+  min-height: 100%;
+  min-height: 100vh;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f0f4f8 0%, #e0e7ff 50%, #fef3c7 100%);
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+button, a {
+  transition: all 0.2s ease;
+}
+
+.page {
+  min-height: 100vh;
+  padding: 32px 20px;
+}
+
+.navbar {
+  max-width: 1200px;
+  margin: 0 auto 32px;
+  padding: 18px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.95);
+  border: 1px solid rgba(30, 58, 95, 0.1);
+  border-radius: 18px;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 4px 20px rgba(30, 58, 95, 0.1);
+}
+
+.brand {
+  font-size: 1.4rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  color: var(--navy-primary);
+}
+
+.nav-links {
+  display: flex;
+  gap: 18px;
+  align-items: center;
+}
+
+.nav-links a {
+  color: var(--gray-700);
+  text-decoration: none;
+  font-weight: 600;
+  padding: 8px 16px;
+  border-radius: 8px;
+}
+
+.nav-links a:hover {
+  color: var(--teal-primary);
+  background: var(--gray-50);
+}
+
+.home-page {
+  padding-top: 24px;
+}
+
+.hero-section {
+  max-width: 1200px;
+  margin: 0 auto;
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 30px 20px 60px;
+}
+
+.hero-text {
+  max-width: 760px;
+}
+
+.eyebrow {
+  margin: 0 0 12px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--teal-primary);
+}
+
+.hero-text h1 {
+  margin: 0;
+  font-size: clamp(2.7rem, 5vw, 5rem);
+  line-height: 1.05;
+  color: var(--navy-dark);
+}
+
+.description {
+  max-width: 640px;
+  margin: 20px auto 0;
+  font-size: 1.1rem;
+  color: var(--gray-600);
+}
+
+.primary-btn {
+  display: inline-block;
+  margin-top: 28px;
+  padding: 14px 26px;
+  background: linear-gradient(135deg, var(--teal-primary) 0%, var(--teal-dark) 100%);
+  color: white;
+  text-decoration: none;
+  border-radius: 999px;
+  font-weight: 800;
+  box-shadow: 0 12px 24px rgba(20, 184, 166, 0.35);
+}
+
+.primary-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 16px 32px rgba(20, 184, 166, 0.45);
+}
+
+.footer {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 24px 0 40px;
+  color: var(--gray-500);
+}
+
+.not-found {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.not-found h1 {
+  font-size: 4rem;
+  margin: 0;
+  color: var(--navy-dark);
+}
+
+.not-found a {
+  color: var(--teal-primary);
+  text-decoration: none;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .nav-links {
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .hero-section {
+    min-height: 60vh;
+  }
+}
